@@ -446,8 +446,8 @@
       <div class="max-w-7xl mx-auto px-3 sm:px-6 py-6 space-y-3">
         <div class="flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-start">
           <div>
-            <p class="font-extrabold text-sm sm:text-base text-brand-800 dark:text-brand-300">
-              صنع من قبل إبراهيم إسماعيل | Made by Ibrahim Ismail
+            <p id="footerCredit" class="font-extrabold text-sm sm:text-base text-brand-800 dark:text-brand-300">
+              صنع من قبل إبراهيم إسماعيل • #made_by_Ibrahim_Ismail
             </p>
             <p id="footerDisclaimer" class="text-xs text-stone-500 dark:text-stone-400 mt-0.5">
               إرشادات توعوية مبنية على معايير العناية التجميلية والسلامة العامة — يُنصح باستشارة الطبيب أو الصيدلي أثناء الحمل أو الحالات الجلدية الخاصة.
@@ -494,6 +494,10 @@
             <button type="button" data-shape="shape-rounded" class="shape-opt py-2 px-3 rounded-xl border text-xs font-bold">عصري (Rounded)</button>
             <button type="button" data-shape="shape-soft" class="shape-opt py-2 px-3 rounded-xl border text-xs font-bold">ناعم جداً (Soft)</button>
           </div>
+        </div>
+
+        <div class="pt-2 border-t border-stone-200 dark:border-stone-800 text-xs text-stone-500 dark:text-stone-400 text-center font-bold">
+          صنع من قبل إبراهيم إسماعيل • #made_by_Ibrahim_Ismail
         </div>
       </div>
     </div>
@@ -581,8 +585,9 @@
         searchPlaceholder: 'ابحث عن منتج، شركة، أو مكون (مثل: سيرافي، بايوديرما، ريتينول)...',
         allBrandsOption: 'كل الشركات العالمية والمحلية',
         allSafetyOption: 'كل معايير السلامة والحمل',
-        pregSafeOption: 'آمن غالباً أثناء الحمل (حسب إرشاد الطبيب)',
-        pregCautionOption: 'تنبيهات خاصة بالحمل أو البشرة الحساسة',
+        pregSafeOption: 'آمن للحمل (حسب إرشاد الطبيب)',
+        pregCautionOption: 'يُستشار طبيب للحمل / تنبيه حساسية',
+        pregAvoidOption: 'تجنبيه أثناء الحمل',
         resetFiltersBtn: 'إعادة ضبط الفلاتر',
         brandsDirectoryTitle: 'دليل الشركات العالمية والمحلية في السوق',
         perfumeTag: 'القسم الرابع • العطور والزيوت العطرية',
@@ -649,8 +654,9 @@
         searchPlaceholder: 'گەڕان بۆ بەرهەم، کۆمپانیا، یان پێکهاتە (وەک: CeraVe، Bioderma، Retinol)...',
         allBrandsOption: 'هەموو کۆمپانیا جیهانی و ناوخۆییەکان',
         allSafetyOption: 'هەموو ستانداردەکانی سەلامەتی',
-        pregSafeOption: 'بە گشتی گونجاو لە کاتی دووگیانی (بە ڕێنمایی پزیشک)',
-        pregCautionOption: 'هۆشداری تایبەت بۆ دووگیانی یان پێستی هەستیار',
+        pregSafeOption: 'گونجاو بۆ دووگیانی (بە ڕێنمایی پزیشک)',
+        pregCautionOption: 'ڕاوێژ بە پزیشک بکە بۆ دووگیانی',
+        pregAvoidOption: 'لە کاتی دووگیانیدا دووربکەوە لێی',
         resetFiltersBtn: 'ڕیسێتکردنەوەی فلتەرەکان',
         brandsDirectoryTitle: 'ڕێبەری کۆمپانیا جیهانی و ناوخۆییەکانی بازاڕ',
         perfumeTag: 'بەشی چوارەم • بۆن و زەیتە بۆنخۆشەکان',
@@ -717,8 +723,9 @@
         searchPlaceholder: 'Önüm, marka ýa-da madda gözläň (mysal: CeraVe, Bioderma, Retinol)...',
         allBrandsOption: 'Ähli Global we Ýerli Markalar',
         allSafetyOption: 'Ähli Howpsuzlyk Standartlary',
-        pregSafeOption: 'Göwrelilikde köplenç howpsuz (lukman maslahaty bilen)',
-        pregCautionOption: 'Göwrelilik ýa-da duýgur deri üçin üns beriň',
+        pregSafeOption: 'Göwrelilikde amatly (lukman bilen maslahatlaşyň)',
+        pregCautionOption: 'Göwrelilikde lukmana ýüz tutuň',
+        pregAvoidOption: 'Göwrelilikde gaça duruň',
         resetFiltersBtn: 'Süzgüçleri Arassala',
         brandsDirectoryTitle: 'Bazardaky Global we Ýerli Kompaniýalar',
         perfumeTag: '4-nji Bölüm • Atırlar we Yslar',
@@ -785,8 +792,9 @@
         searchPlaceholder: 'Search product, brand, or ingredient (e.g. CeraVe, Bioderma, Retinol)...',
         allBrandsOption: 'All Global & Local Brands',
         allSafetyOption: 'All Safety & Pregnancy Standards',
-        pregSafeOption: 'Generally compatible in pregnancy (consult doctor)',
-        pregCautionOption: 'Pregnancy or sensitive skin precautions',
+        pregSafeOption: 'Pregnancy-Safe (Consult Doctor)',
+        pregCautionOption: 'Consult Doctor for Pregnancy',
+        pregAvoidOption: 'Avoid During Pregnancy',
         resetFiltersBtn: 'Reset Filters',
         brandsDirectoryTitle: 'Global & Regional Brands Directory',
         perfumeTag: 'Section 4 • Perfumes & Fragrances',
@@ -1087,11 +1095,12 @@
      */
     const CATEGORIES_DATA = [
       { id: 'all', label: { ar: 'كل الأقسام', ckb: 'هەموو بەشەکان', tk: 'Ähli Bölümler', en: 'All Categories' } },
-      { id: 'shampoo', label: { ar: 'شامبوهات وعناية بالشعر', ckb: 'شامپۆ و قژ', tk: 'Şampun we Saç', en: 'Shampoos & Hair' } },
-      { id: 'cleanser', label: { ar: 'غسولات الوجه', ckb: 'غەسوولی دەم و چاو', tk: 'Ýüz Ýuwujylar', en: 'Cleansers' } },
-      { id: 'exfoliant', label: { ar: 'مقشرات البشرة', ckb: 'مقشەری پێست', tk: 'Eksfoliantlar', en: 'Exfoliants' } },
-      { id: 'moisturizer', label: { ar: 'مرطبات وبايوديرما وسيرافي', ckb: 'شێدارکەرەوە و سیراڤی و بایۆدێرما', tk: 'Çyglandyryjylar', en: 'Moisturizers & Derm' } },
+      { id: 'shampoo', label: { ar: 'شامبوهات', ckb: 'شامپۆکان', tk: 'Şampunlar', en: 'Shampoos' } },
+      { id: 'soap', label: { ar: 'صابونات', ckb: 'سابوونەکان', tk: 'Sabynlar', en: 'Soaps' } },
+      { id: 'cleanser', label: { ar: 'غسولات', ckb: 'غەسوولەکان', tk: 'Ýuwujylar', en: 'Cleansers' } },
+      { id: 'exfoliant', label: { ar: 'مقشرات', ckb: 'مقشەرەکان', tk: 'Eksfoliantlar', en: 'Exfoliants' } },
       { id: 'makeup', label: { ar: 'مكياج ومسكارا', ckb: 'ماکیاژ و مەسکارا', tk: 'Makiýaž we Tuş', en: 'Makeup & Mascara' } },
+      { id: 'moisturizer', label: { ar: 'مرطبات وبايوديرما وسيرافي', ckb: 'شێدارکەرەوە و سیراڤی و بایۆدێرما', tk: 'Çyglandyryjylar', en: 'Moisturizers & Dermocosmetics' } },
       { id: 'body', label: { ar: 'العناية بالجسم', ckb: 'گرنگیپێدان بە جەستە', tk: 'Beden Idegi', en: 'Body Care' } },
       { id: 'perfume', label: { ar: 'العطور', ckb: 'بۆنەکان', tk: 'Atırlar', en: 'Perfumes' } }
     ];
@@ -1104,9 +1113,12 @@
       { id: 'Garnier', name: 'Garnier', origin: 'France / L\'Oreal', note: { ar: 'منتجات يومية واسعة الانتشار مثل ميسيلار والعناية بالشعر — متوفرة في كل الأسواق المحلية.', ckb: 'بەرهەمی ڕۆژانەی بەربڵاو وەک میسێلار و قژ — لە هەموو بازاڕەکان هەیە.', tk: 'Gündelik miselýar suwlary we saç serişdeleri — ähli ýerde elýeterli.', en: 'Everyday staples like micellar water & haircare — broadly available in local markets.' } },
       { id: 'L\'Oreal Paris', name: 'L\'Oreal Paris', origin: 'France', note: { ar: 'عناية بالبشرة والشعر والمكياج عالمياً ومحلياً في العراق والمنطقة.', ckb: 'گرنگیپێدان بە پێست و قژ و ماکیاژ بە شێوەی جیهانی و ناوخۆیی.', tk: 'Deri, saç we makiýaž boýunça dünýä belli marka.', en: 'Global skincare, haircare & cosmetics brand available across regional markets.' } },
       { id: 'Maybelline', name: 'Maybelline New York', origin: 'USA', note: { ar: 'رائدة في الماسكارا ومستحضرات المكياج اليومية بأسعار مناسبة.', ckb: 'پێشەنگ لە مەسکارا و ماکیاژی ڕۆژانە بە نرخی گونجاو.', tk: 'Tuş we gündelik makiýaž önümleri bilen tanalýar.', en: 'Well-known for mascaras and everyday makeup across global & local retailers.' } },
+      { id: 'Eucerin', name: 'Eucerin', origin: 'Germany', note: { ar: 'عناية جلدية طبية معروفة لترطيب البشرة الجافة والحساسة واليوريا والهيالورونيك.', ckb: 'گرنگیپێدانی پزیشکی پێست بۆ پێستی وشک و هەستیار و شێدارکردنەوە.', tk: 'Gury we duýgur deri üçin lukmançylyk dermokosmetikasy.', en: 'Medical skincare brand recognized for dry/sensitive barrier care, urea & hyaluronic formulas.' } },
+      { id: 'Vichy', name: 'Vichy', origin: 'France', note: { ar: 'مستحضرات طبية بمياه فيشي البركانية المعدنية للعناية بالبشرة وفروة الرأس.', ckb: 'بەرهەمی پزیشکی بە ئاوی گڕکانی ڤیچی بۆ پێست و پێستی سەر.', tk: 'Wulkan mineral suwly deri we saç idegi önümleri.', en: 'Mineralizing volcanic water skincare and scalp care available in pharmacies.' } },
+      { id: 'Cetaphil', name: 'Cetaphil', origin: 'Global / Galderma', note: { ar: 'غسولات ومرطبات لطيفة مصممة للبشرة الحساسة والمتحسسة بسهولة.', ckb: 'غەسوول و شێدارکەرەوەی زۆر نەرم بۆ پێستی هەستیار.', tk: 'Duýgur deri üçin ýumşak arassalaýjylar we çyglandyryjylar.', en: 'Gentle cleansers and moisturizers tailored for sensitive and reactive skin.' } },
       { id: 'Kerastase', name: 'Kérastase', origin: 'France', note: { ar: 'عناية احترافية متقدمة للشعر المصبوغ والجاف والتالف في الصالونات والمتاجر المختصة.', ckb: 'گرنگیپێدانی پێشکەوتوو بۆ قژی بۆیاخکراو و وشک و تێکەڵ لە ساڵۆن و فرۆشگاکان.', tk: 'Boýalan we gury saçlar üçin ýokary hilli ideg serişdeleri.', en: 'Salon-grade haircare for color-treated, dry, and sensitized hair.' } },
-      { id: 'Pantene', name: 'Pantene', origin: 'Global / Pro-V', note: { ar: 'شامبوهات وبلسمات برو-فيتامبن B5 متوفرة على نطاق واسع في السوبرماركت والأسواق المحلية.', ckb: 'شامپۆ و نەرمکەرەوەی Pro-V لە بازاڕە ناوخۆییەکان زۆر بەردەستە.', tk: 'Pro-V vitaminli şampunlar we kondisionerler — ýerli bazarlarda köp.', en: 'Pro-Vitamin B5 shampoos & conditioners widely available in supermarkets.' } },
-      { id: 'Dove', name: 'Dove', origin: 'Global / Unilever', note: { ar: 'غسولات مرطبة ولطيفة للجسم واليدين والوجه بتركيبة كريمية.', ckb: 'شۆرەوەی نەرم و شێدارکەرەوە بۆ جەستە و دەست بە پێکهاتەی کرێمی.', tk: 'Beden we el üçin ýumşak çyglandyryjy ýuwujylar.', en: 'Gentle moisturizing cleansers and body care known for mild conditioning bases.' } },
+      { id: 'Pantene', name: 'Pantene', origin: 'Global / Pro-V', note: { ar: 'شامبوهات وبلسمات برو-فيتامين B5 متوفرة على نطاق واسع في السوبرماركت والأسواق المحلية.', ckb: 'شامپۆ و نەرمکەرەوەی Pro-V لە بازاڕە ناوخۆییەکان زۆر بەردەستە.', tk: 'Pro-V vitaminli şampunlar we kondisionerler — ýerli bazarlarda köp.', en: 'Pro-Vitamin B5 shampoos & conditioners widely available in supermarkets.' } },
+      { id: 'Dove', name: 'Dove', origin: 'Global / Unilever', note: { ar: 'غسولات وصابونات مرطبة ولطيفة للجسم واليدين والوجه بتركيبة كريمية.', ckb: 'غەسوول و سابوونی شێدارکەرەوە و نەرم بۆ جەستە و دەست بە پێکهاتەی کرێمی.', tk: 'Beden we el üçin ýumşak çyglandyryjy sabynlar we ýuwujylar.', en: 'Gentle moisturizing beauty bars, cleansers & body care with conditioning bases.' } },
       { id: 'Local & Oud Artisans', name: 'عطور وزيوت المنطقة والعراق', origin: 'Iraq & Middle East', note: { ar: 'دهن العود، المسك، العنبر، والزيوت العطرية المركزة في أسواق بغداد، أربيل، كركوك، البصرة والخليج.', ckb: 'دەهنی عوود، میسک، عەنبەر و زەیتی بۆنخۆش لە بازاڕەکانی کوردستان، عێراق و کەنداو.', tk: 'Ud, müşk, änbir we ýagly atırlar — Yrak we sebit bazarlarynda meşhur.', en: 'Oud oils, musk, amber & attars across Iraqi and Middle Eastern perfumers.' } }
     ];
 
@@ -1721,45 +1733,99 @@
           tk: 'Yrakda, Pars aýlagynda we Ýakyn Gündogarda örän meşhur.',
           en: 'Widely available across perfumers in Iraq, the Gulf, and the Middle East.'
         }
-      }
-    ];
-
-    /**
-     * =========================================================================
-     * PERFUMES GUIDE DATA (Oil vs Alcohol + 4 Fragrance Families)
-     * =========================================================================
-     */
-    const PERFUME_TYPES_DATA = [
+      },
       {
-        title: { ar: 'العطور الزيتية (Perfume Oils / Attars)', ckb: 'بۆنە زەیتییەکان (Perfume Oils)', tk: 'Ýagly Atırlar (Attarlar)', en: 'Oil-Based Perfumes (Attars)' },
-        badge: { ar: 'بدون كحول • ثبات قريب من الجلد', ckb: 'بێ کهول • جێگیر و نزیک لە پێست', tk: 'Spirtsiz • Ýakyndan uzak saklanýar', en: 'Alcohol-Free • Close-to-Skin Longevity' },
-        desc: {
-          ar: 'تعتمد على زيوت عطرية مركزة وحوامل زيتية دون كحول تبخيري، مما يجعلها أقل جفافاً للبشرة وأكثر ثباتاً على الأقمشة ونقاط النبض.',
-          ckb: 'پشت بە زەیتی بۆنخۆشی چڕ دەبەستێت بەبێ کهول، بۆیە کەمتر پێست وشک دەکات و لەسەر قوماش دەمێنێتەوە.',
-          tk: 'Spirtsiz ýagly esasda ýasalýar, derini guradýan däl we uzak wagtlap saklanýar.',
-          en: 'Formulated with concentrated fragrance oils without evaporating alcohol, often feeling softer and longer-lasting close to the skin.'
+        id: 'dove-beauty-bar-soap',
+        brand: 'Dove',
+        category: 'soap',
+        svgTheme: 'body',
+        primaryHex: '#0284c7',
+        secondaryHex: '#e0f2fe',
+        hairTypes: [],
+        skinTypes: ['dry', 'sensitive', 'normal'],
+        pregnancyStatus: 'safe',
+        name: {
+          ar: 'دوف صابونة الجمال المرطبة (White Beauty Bar)',
+          ckb: 'دۆڤ سابوونی جوانی شێدارکەرەوە',
+          tk: 'Dove Çyglandyryjy Gözellik Sabyny',
+          en: 'Dove White Beauty Bar'
         },
-        tips: {
-          ar: 'نقطة واحدة تكفي؛ احذر البقع الدهنية على الحرير الفاتح.',
-          ckb: 'یەک دڵۆپ بەسە؛ ئاگاداری پەڵەی چەوری بە لەسەر قوماشی ناسک و کاڵ.',
-          tk: 'Bir damja ýeterlik; açyk reňkli näzik matalarda tegmil galdyryp biler.',
-          en: 'A small dab goes a long way; test on a hidden spot of delicate fabrics first.'
+        suitableLabel: {
+          ar: 'اليدين والجسم والبشرة الجافة أو الحساسة التي لا تتحمل الصابون التقليدي القاسي',
+          ckb: 'دەست و جەستە و پێستی وشک یان هەستیار کە سابوونی ئاسایی وشکی دەکات',
+          tk: 'El, beden we adaty gaty sabynlara çydamaýan gury ýa-da duýgur deri',
+          en: 'Hands, Body & Dry/Sensitive Skin Uncomfortable With Harsh Traditional Soaps'
+        },
+        ingredients: {
+          ar: 'ربع كريم مرطب، منظفات لطيفة متعادلة الحموضة نسبياً مقارنة بالصابون التقليدي.',
+          ckb: 'چوارەکی کرێمی شێدارکەرەوە لەگەڵ پاککەرەوەی نەرم بۆ کەمکردنەوەی وشکبوونەوە.',
+          tk: 'Çyglandyryjy kremiň dörtden bir bölegi we ýumşak arassalaýjy esas.',
+          en: 'Mild syndet cleansing base with one-quarter moisturizing cream to reduce dryness compared to traditional soap.'
+        },
+        howToUse: {
+          ar: 'تُفرك بين اليدين بماء فاتر لتكوين رغوة ناعمة وتُوزع على الجسم أو اليدين ثم تُشطف جيداً.',
+          ckb: 'لە نێوان دەستەکان بە ئاوی شلەتێن کەف دەکات و لە جەستە یان دەست دەدرێت و دەشۆرێت.',
+          tk: 'Mylaýym suw bilen köpüklendirip, bedene ýa-da ele çalyň we gowy ýuwuň.',
+          en: 'Work into a soft lather with lukewarm water on hands or body and rinse thoroughly.'
+        },
+        safetyStandard: {
+          ar: 'آمن للحمل والرضاعة للاستخدام الخارجي؛ يُفضل تجنب ملامسة العينين.',
+          ckb: 'بۆ بەکارهێنانی دەرەکی لە کاتی دووگیانی و شیرپێدان گونجاوە؛ ئاگاداربە نەچێتە ناو چاو.',
+          tk: 'Göwrelilikde we emziklikde daşky ulanmak üçin amatly.',
+          en: 'Pregnancy-safe for external use; avoid contact with eyes.'
+        },
+        marketAvailability: {
+          ar: 'متوفر في جميع الأسواق والصيدليات في العراق والمنطقة والعالم.',
+          ckb: 'لە هەموو بازاڕ و دەرمانخانەکانی عێراق، هەرێم و جیهان هەیە.',
+          tk: 'Yragyň, sebitiň we dünýäniň ähli dükanlarynda bar.',
+          en: 'Universally available across stores and pharmacies in Iraq, the region, and worldwide.'
         }
       },
       {
-        title: { ar: 'العطور الكحولية (EDP / EDT / Cologne)', ckb: 'بۆنە کهولییەکان (EDP / EDT)', tk: 'Spirtli Atırlar (EDP / EDT)', en: 'Alcohol-Based Perfumes (EDP / EDT)' },
-        badge: { ar: 'انتشار فوري • طبقات نوتات واضحة', ckb: 'بڵاوبوونەوەی خێرا • چینی بۆنی ڕوون', tk: 'Çalt ýaýraýar • Aýdyň ys gatlaklary', en: 'Stronger Projection • Distinct Note Evolution' },
-        desc: {
-          ar: 'تُذاب الزيوت العطرية في كحول تجميلي مخصص للعطور يمنح فوحاناً سريعاً وانتشاراً واضحاً للطبقة العليا والوسطى والقاعدية.',
-          ckb: 'زەیتە بۆنخۆشەکان لە کهولی تایبەتی بۆن دەتوێنەوە و بڵاوبوونەوەی خێرا و چینەکانی بۆن دەردەخەن.',
-          tk: 'Ysly ýaglar ýörite spirtde eredilýär, ýokary we ýürek notalaryny çalt duýdurýar.',
-          en: 'Fragrance compounds dissolved in perfumery alcohol for diffusion, sillage, and clear top-to-base note progression.'
+        id: 'ordinary-retinol-avoid',
+        brand: 'The Ordinary',
+        category: 'exfoliant',
+        svgTheme: 'exfoliant',
+        primaryHex: '#b91c1c',
+        secondaryHex: '#fee2e2',
+        hairTypes: [],
+        skinTypes: ['normal', 'combination', 'oily'],
+        pregnancyStatus: 'avoid',
+        name: {
+          ar: 'ذا أورديناري سيروم ريتينول (Retinol Serum)',
+          ckb: 'زە ئۆردینەری سیرۆمی ڕیتینۆڵ',
+          tk: 'The Ordinary Retinol Serumy',
+          en: 'The Ordinary Retinol Serum'
         },
-        tips: {
-          ar: 'رُش من مسافة 15-20 سم ولا تفرك المعصمين بقوة حتى لا تتكسر النوتات العطرية.',
-          ckb: 'لە دووری ١٥-٢٠ سم بیدە و مەچەکەکانت بە توندی مەخشێنە تا پێکهاتەی بۆنەکە تێکنەچێت.',
-          tk: '15-20 sm uzaklykdan sepiň, ys notalaryny bozmazlyk üçin bilekleri güýçli sürtmeň.',
-          en: 'Spray from 15–20 cm away and avoid rubbing wrists together aggressively so top notes unfold naturally.'
+        suitableLabel: {
+          ar: 'تجديد مظهر البشرة والخطوط الدقيقة لغير الحوامل والمرضعات فقط',
+          ckb: 'بۆ نوێکردنەوەی پێست و هێڵە ناسکەکان — تەنها بۆ غەیری دووگیان و شیردەر',
+          tk: 'Derini täzelemek üçin — diňe göwreli däl we emdirmeýän adamlar üçin',
+          en: 'Texture & Fine Line Renewal — Strictly for Non-Pregnant, Non-Lactating Adults'
+        },
+        ingredients: {
+          ar: 'مشتق فيتامين أ (Retinol) ومرطبات حاملة؛ يُنصح بعدم دمجه مع مقشرات قوية في نفس الجلسة.',
+          ckb: 'پێکهاتەی ڕیتینۆڵ (ڤیتامین A)؛ لە هەمان کاتدا لەگەڵ مقشەری تر تێکەڵی مەکە.',
+          tk: 'Retinol (Vitamin A önümi) — şol bir wagtda beýleki güýçli kislotalar bilen ulanmaň.',
+          en: 'Retinol (Vitamin A derivative) in a supportive base; avoid layering with other strong exfoliants.'
+        },
+        howToUse: {
+          ar: 'يُوضع مساءً بكمية بحجم حبة البازلاء على بشرة جافة بعد التنظيف، يليه مرطب، مع واقي شمس إلزامي صباحاً.',
+          ckb: 'لە ئێواراندا بڕێکی کەم لەسەر پێستی وشک بدە، دواتر شێدارکەرەوە و بەیانیان دژەخۆر بەکاربهێنە.',
+          tk: 'Agşam gury derä nohut ululygynda çalyň, yzyndan çyglandyryjy, irden hökman gün goragy.',
+          en: 'Apply a pea-sized amount in the evening to clean, dry skin, follow with moisturizer, and wear SPF every morning.'
+        },
+        safetyStandard: {
+          ar: 'تجنبيه أثناء الحمل والرضاعة: يُنصح بتجنب منتجات الريتينول/الريتينويدات أثناء الحمل والرضاعة والالتزام بواقي الشمس نهاراً.',
+          ckb: 'لە کاتی دووگیانی و شیرپێدان دووربکەوە لێی و ڕۆژانە دژەخۆر بەکاربهێنە.',
+          tk: 'Göwrelilikde we emziklikde gaça duruň; gündiz gün goragyny ulanyň.',
+          en: 'Avoid during pregnancy and breastfeeding; strict daytime SPF is required when used.'
+        },
+        marketAvailability: {
+          ar: 'متوفر في متاجر التجميل والعناية بالبشرة في العراق والمنطقة وعالمياً.',
+          ckb: 'لە دووکانی جوانکاری لە عێراق، هەرێم و جیهان بەردەستە.',
+          tk: 'Yrakda, sebitde we dünýäde kosmetika dükânlarynda bar.',
+          en: 'Available in beauty stores and skincare retailers globally and regionally.'
         }
       }
     ];
@@ -2133,6 +2199,7 @@
         <option value="all">${t('allSafetyOption')}</option>
         <option value="safe">${t('pregSafeOption')}</option>
         <option value="caution">${t('pregCautionOption')}</option>
+        <option value="avoid">${t('pregAvoidOption')}</option>
       `;
       safetySelect.value = APP_STATE.selectedSafety;
 
@@ -2204,17 +2271,17 @@
     function createProductCardHtml(prod) {
       const lang = APP_STATE.lang;
       const isSafe = prod.pregnancyStatus === 'safe';
-      const safetyBadgeClass = isSafe
+      const isAvoid = prod.pregnancyStatus === 'avoid';
+      const safetyBadgeClass = isAvoid
+        ? 'bg-rose-100 text-rose-800 dark:bg-rose-900/40 dark:text-rose-200'
+        : isSafe
         ? 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200'
         : 'bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-200';
-      const safetyBadgeText = isSafe
-        ? (lang === 'en' ? 'Pregnancy-Friendly (Consult Dr.)' : lang === 'tk' ? 'Göwrelilikde amatly' : lang === 'ckb' ? 'بە گشتی گونجاو لە دووگیانی' : 'آمن غالباً في الحمل')
-        : (lang === 'en' ? 'Check Safety / Pregnancy Note' : lang === 'tk' ? 'Howpsuzlyk duýduryşy bar' : lang === 'ckb' ? 'هۆشداری سەلامەتی هەیە' : 'تنبيه سلامة / حمل');
-
-      return `
-        <article class="card-ui bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 p-4 shadow-sm flex flex-col justify-between space-y-3 hover:border-brand-400 transition">
-          <div class="space-y-3">
-            <div class="flex items-start gap-3">
+      const safetyBadgeText = isAvoid
+        ? t('pregAvoidOption')
+        : isSafe
+        ? t('pregSafeOption')
+        : t('pregCautionOption');
               ${getProductSvg(prod.svgTheme, prod.primaryHex, prod.secondaryHex)}
               <div class="min-w-0 flex-1">
                 <div class="flex flex-wrap items-center gap-1.5 mb-1">
@@ -2555,7 +2622,10 @@
       const lang = APP_STATE.lang;
 
       const isSafe = prod.pregnancyStatus === 'safe';
-      const safetyBoxStyle = isSafe
+      const isAvoid = prod.pregnancyStatus === 'avoid';
+      const safetyBoxStyle = isAvoid
+        ? 'bg-rose-50 dark:bg-rose-950/40 border-rose-200 dark:border-rose-800 text-rose-950 dark:text-rose-100'
+        : isSafe
         ? 'bg-emerald-50 dark:bg-emerald-950/40 border-emerald-200 dark:border-emerald-800 text-emerald-950 dark:text-emerald-100'
         : 'bg-amber-50 dark:bg-amber-950/40 border-amber-200 dark:border-amber-800 text-amber-950 dark:text-amber-100';
 
@@ -2564,7 +2634,10 @@
           <div class="flex items-center gap-3">
             ${getProductSvg(prod.svgTheme, prod.primaryHex, prod.secondaryHex)}
             <div>
-              <span class="text-xs font-extrabold px-2.5 py-0.5 rounded-full bg-brand-100 dark:bg-brand-900/50 text-brand-800 dark:text-brand-200">${prod.brand}</span>
+              <div class="flex flex-wrap items-center gap-1.5">
+                <span class="text-xs font-extrabold px-2.5 py-0.5 rounded-full bg-brand-100 dark:bg-brand-900/50 text-brand-800 dark:text-brand-200">${prod.brand}</span>
+                <span class="text-xs font-bold px-2.5 py-0.5 rounded-full ${safetyBoxStyle}">${isAvoid ? t('pregAvoidOption') : isSafe ? t('pregSafeOption') : t('pregCautionOption')}</span>
+              </div>
               <h4 class="font-extrabold text-base sm:text-lg text-stone-900 dark:text-white mt-1">${prod.name[lang]}</h4>
             </div>
           </div>
